@@ -1,0 +1,22 @@
+package roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators;
+
+public enum Decote {
+
+	CANOA,
+	GOLA_ALTA,
+	CORACAO,
+	TOMARA_QUE_CAIA,
+	EM_V,
+	U,
+	OVERSIZED,
+	QUADRADO,
+	CARECA,
+	COLARINHO_INGLES,
+	COLARINHO_AMERICANO, 
+	COLARINHO_ITALIANO,
+	COLARINHO_CURTO,
+	COLARINHO_MAO,
+	COLARINHO_OPERA,
+	COLARINHO_QUEBRADO,
+	
+}
