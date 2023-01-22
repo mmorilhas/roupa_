@@ -27,9 +27,18 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		return composicao;
 	}
 	
-	public Construcao getConstrucao() {
-		return construcao;
+	public void setTodasAsPropriedades() {
+	
+			setTipoDeTecido();
+			setTempoDeSecagem();
+			setEhRespiravel();
+			setAbsorcaoDeAgua();
+			setElasticidade();
+			setComportamentoTermico();
+			setResistencia();
+	
 	}
+	
 	
 	public void setTipoDeTecido() {
 		HashSet<String> tecidos = new HashSet<>();
@@ -50,23 +59,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		}
 
 	}
-	public String getTipoDeTecido() {
-		return tipoDeTecido;
-	}
-	
-	
-	
-	@Override
-	public void setTodasPropriedadesDeUmaVez() {
-		setTipoDeTecido();
-		setTempoDeSecagem();
-		setEhRespiravel();
-		setAbsorcaoDeAgua();
-		setElasticidade();
-		setComportamentoTermico();
-		setResistencia();
-	}
-	
 
 	
 	@Override
@@ -87,9 +79,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 	}
 	
 
-	public String getTempoSecagemTecido() {
-		return tempoSecagemTecido;
-	}
 
 
 	@Override
@@ -109,9 +98,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 
 	}
 	
-	public String getTecidoRespiravel() {
-		return tecidoRespiravel;
-	}
 
 	@Override
 	public void setAbsorcaoDeAgua() {
@@ -129,10 +115,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 			}
 		}
 
-	}
-	
-	public String getAbsorcaoAguaTecido() {
-		return absorcaoAguaTecido;
 	}
 
 	@Override
@@ -152,9 +134,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		}
 
 	}
-	public String getElasticidadeTecido() {
-		return elasticidadeTecido;
-	}
 
 	@Override
 	public void setComportamentoTermico() {
@@ -171,10 +150,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 				comportamentoTermicoTecido  = "possui boa regulação de calor";
 			}
 		}
-	}
-	
-	public String getComportamentoTermicoTecido() {
-		return comportamentoTermicoTecido;
 	}
 	
 
@@ -200,14 +175,11 @@ public class Tecido implements SetPropriedadesFibraETecido {
 
 	}
 	
-	public String getResistenciaTecido() {
-		return resistenciaTecido;
-	}
 
 	
 	@Override
 	public String toString() {
-		return "\nTecido: " + this.getConstrucao() + " " + this.getTipoDeTecido() + "\nPropriedades: \n      " + this.getAbsorcaoAguaTecido() + "\n      " + this.getTempoSecagemTecido() + "\n      " + this.getTecidoRespiravel() + "\n      " + this.getComportamentoTermicoTecido() + "\n      " + this.getResistenciaTecido() + "\n      " + this.getElasticidadeTecido() + "\n";
+		return "\nTecido: " + this.construcao + " " + this.tipoDeTecido + "\nPropriedades: \n      " + this.absorcaoAguaTecido + "\n      " + this.tempoSecagemTecido + "\n      " + this.tecidoRespiravel + "\n      " + this.comportamentoTermicoTecido + "\n      " + this.resistenciaTecido + "\n      " + this.elasticidadeTecido + "\n";
 	}
 
 

@@ -14,7 +14,7 @@ public class Modal extends FibraArtificial implements SetPropriedadesFibraETecid
 	
 	// ou raion/rayon
 	@Override
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();

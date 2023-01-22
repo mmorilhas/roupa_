@@ -13,7 +13,7 @@ import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 public class Poliamida extends FibraSintetica implements SetPropriedadesFibraETecido{
 	
 	//ou nylon 
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();

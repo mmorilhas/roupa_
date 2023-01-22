@@ -13,7 +13,7 @@ import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 public class Viscose extends FibraArtificial implements SetPropriedadesFibraETecido {
 	
 	@Override
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();

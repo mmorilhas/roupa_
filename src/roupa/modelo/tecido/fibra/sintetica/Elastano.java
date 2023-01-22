@@ -14,7 +14,7 @@ public class Elastano extends FibraSintetica implements SetPropriedadesFibraETec
 	
 	//elastano ou Lycra
 	
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();
