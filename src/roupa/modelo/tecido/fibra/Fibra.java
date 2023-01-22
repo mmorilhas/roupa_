@@ -1,5 +1,7 @@
 package roupa.modelo.tecido.fibra;
 
+import java.util.Objects;
+
 import roupa.modelo.tecido.fibra.enumerators.AbsorcaoAguaFibra;
 import roupa.modelo.tecido.fibra.enumerators.ComportamentoTermicoFibra;
 import roupa.modelo.tecido.fibra.enumerators.ElasticidadeFibra;
@@ -19,6 +21,7 @@ public abstract class Fibra{
 	protected ComportamentoTermicoFibra comportamentoTermico;
 	protected ResistenciaFibra resistencia;
 
+	
 	public NomeFibra getNomeFibra() {
 		return nomeFibra;
 	}
@@ -43,6 +46,34 @@ public abstract class Fibra{
 	public ResistenciaFibra getResistencia() {
 		return resistencia;
 	}
+	
+	public void setTodasAsPropriedades() {
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(absorcaoDeAgua, comportamentoTermico, elasticidade, nomeFibra, resistencia, respiravel,
+				tempoDeSecagem, tipoFibra);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Fibra other = (Fibra) obj;
+		return absorcaoDeAgua == other.absorcaoDeAgua && comportamentoTermico == other.comportamentoTermico
+				&& elasticidade == other.elasticidade && nomeFibra == other.nomeFibra
+				&& resistencia == other.resistencia && respiravel == other.respiravel
+				&& tempoDeSecagem == other.tempoDeSecagem && tipoFibra == other.tipoFibra;
+	}
+
+	
+	
+	
 
 	
 

@@ -1,10 +1,9 @@
 package roupa.modelo.parteCimaECorpoInteiro.parteDeCima;
 
-import java.util.Collection;
 
-import roupa.modelo.Aviamento;
+import java.util.Objects;
+
 import roupa.modelo.Genero;
-import roupa.modelo.GrupoEtario;
 import roupa.modelo.TipoDeRoupa;
 import roupa.modelo.modelagem.Modelagem;
 import roupa.modelo.parteCimaECorpoInteiro.ParteDeCimaECorpoInteiro;
@@ -14,10 +13,6 @@ import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Decote;
 import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Manga;
 import roupa.modelo.tecido.Tecido;
 
-
-//DECOTE != DE TOMARA QUE CAIA
-//DECOTE != DE COLARINHO???
-
 public class Poncho extends ParteDeCimaECorpoInteiro{
 
 	ComprimentoPoncho comprimentoPoncho;
@@ -26,11 +21,9 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 		this.nome = builder.nome;
 		this.tamanho = builder.tamanho;
 		this.genero = builder.genero;
-		this.grupoEtario = builder.grupoEtario;
 		this.cor = builder.cor;
 		this.modelagem = builder.modelagem;
 		this.tecidos = builder.tecidos;
-		this.aviamentos = builder.aviamentos;
 		this.temEstampa = builder.temEstampa;
 		this.temBordado = builder.temBordado;
 		this.tipoDeRoupa = builder.tipoDeRoupa;
@@ -49,7 +42,6 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 		protected final TipoDeRoupa tipoDeRoupa = TipoDeRoupa.PARTE_DE_CIMA;
 		protected Integer tamanho;
 		protected Genero genero;
-		protected GrupoEtario grupoEtario;
 		protected String cor;
 		protected Modelagem modelagem;
 		protected Tecido tecidos;
@@ -60,7 +52,6 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 		protected final Cava cava = Cava.SEM_CAVA;
 		protected Boolean capuz;
 		protected Boolean capa;
-		protected String[] aviamentos;
 		protected ComprimentoPoncho comprimentoPoncho;
 
 
@@ -85,11 +76,6 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 			return this;
 		}
 
-		public PonchoBuilder grupoEtario(GrupoEtario grupoEtario) {
-			this.grupoEtario = grupoEtario;
-			return this;
-		}
-
 		public PonchoBuilder cor(String cor) {
 			this.cor = cor;
 			return this;
@@ -102,11 +88,6 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 
 		public PonchoBuilder tecido(Tecido tecidos) {
 			this.tecidos = tecidos;
-			return this;
-		}
-
-		public PonchoBuilder aviamentos(String[] aviamentos) {
-			this.aviamentos = aviamentos;
 			return this;
 		}
 		
@@ -143,12 +124,42 @@ public class Poncho extends ParteDeCimaECorpoInteiro{
 	}
 	
 	public String toString() {
-		return "\nPeça criada! \n" + this.tipoDeRoupa + " ---> " + this.nome + " " + "\nTamanho: " + this.tamanho + "\nComprimento: " + this.comprimentoPoncho 
-				+ "\nGrupo: " + this.genero + " " + this.grupoEtario + "\nCor: " + this.cor + "\n\nDe tecido: "
-				+ this.tecidos + "\nDe Modelagem: " + this.modelagem + "\n      Manga: " + " " 
-				+ this.manga + " " + "\n      Cava: " + this.cava + "\n      Decote:  " + this.decote
-			 + "\n      Possui Capuz: " + this.capuz
-				+ "\n      Possui Capa:  " + this.capa;
+		return "\nPeça criada! " 
+				+ this.tipoDeRoupa + " ---> " 
+				+ this.nome.toUpperCase()
+				+ " Tamanho: " + this.tamanho 
+				+ " Comprimento: " + this.comprimentoPoncho 
+				+ " Grupo: " + this.genero 
+				+ " Cor: " + this.cor.toUpperCase()
+				+ " De tecido: "	+ this.tecidos 
+				+ " De Modelagem: " + this.modelagem 
+				+ "      Manga: " + this.manga 
+				+ "      Cava: " + this.cava 
+				+ "      Decote:  " + this.decote
+			    + "      Possui Capuz: " + this.capuz
+				+ "      Possui Capa:  " + this.capa;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(comprimentoPoncho);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Poncho other = (Poncho) obj;
+		return comprimentoPoncho == other.comprimentoPoncho;
+	}
+	
+	
 
 }

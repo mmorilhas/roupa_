@@ -1,43 +1,42 @@
-package roupa.modelo.parteCimaECorpoInteiro.CorpoInteiro;
+package roupa.modelo.parteCimaECorpoInteiro.parteDeCima.comLapela;
 
-import java.util.Collection;
 
-import roupa.modelo.Aviamento;
+import java.util.Objects;
+
 import roupa.modelo.Genero;
-import roupa.modelo.GrupoEtario;
 import roupa.modelo.TipoDeRoupa;
 import roupa.modelo.modelagem.Modelagem;
-import roupa.modelo.parteCimaECorpoInteiro.ParteDeCimaECorpoInteiro;
-import roupa.modelo.parteCimaECorpoInteiro.CorpoInteiro.enumerators.MacacaoComprimento;
+import roupa.modelo.parteCimaECorpoInteiro.ParteDeCimaComLapela;
 import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Cava;
 import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Decote;
+import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Lapela;
 import roupa.modelo.parteCimaECorpoInteiro.parteDeCima.enumerators.Manga;
+import roupa.modelo.parteDeBaixo.ComPernas.enumerators.ComprimentoDeCalca;
 import roupa.modelo.parteDeBaixo.ComPernas.enumerators.GanchoTipos;
 import roupa.modelo.parteDeBaixo.ComPernas.enumerators.PunhoCalca;
 import roupa.modelo.tecido.Tecido;
 
-public class Macacao extends ParteDeCimaECorpoInteiro{
+public class Macacao extends ParteDeCimaComLapela{
 	
 	protected PunhoCalca punhoCalca;
 	protected GanchoTipos ganchoTipos;
-	protected MacacaoComprimento comprimentoMacacao;
+	protected ComprimentoDeCalca comprimentoMacacao;
 	
 	
 	public Macacao(MacacaoBuilder builder) {
 		this.nome = builder.nome;
 		this.tamanho = builder.tamanho;
 		this.genero = builder.genero;
-		this.grupoEtario = builder.grupoEtario;
 		this.cor = builder.cor;
 		this.modelagem = builder.modelagem;
 		this.tecidos = builder.tecidos;
-		this.aviamentos = builder.aviamentos;
 		this.temEstampa = builder.temEstampa;
 		this.temBordado = builder.temBordado;
 		this.tipoDeRoupa = builder.tipoDeRoupa;
 		this.manga = builder.manga;
 		this.decote = builder.decote;
 		this.cava = builder.cava;
+		this.lapela = builder.lapela;
 		this.capuz = builder.capuz;
 		this.capa = builder.capa;
 		this.comprimentoMacacao = builder.comprimentoMacacao;
@@ -51,19 +50,18 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 		protected final TipoDeRoupa tipoDeRoupa = TipoDeRoupa.CORPO_INTEIRO;
 		protected Integer tamanho;
 		protected Genero genero;
-		protected GrupoEtario grupoEtario;
 		protected String cor;
 		protected Modelagem modelagem;
 		protected Tecido tecidos;
-		protected String[] aviamentos;
 		protected Boolean temEstampa;
 		protected Boolean temBordado;
 		protected Manga manga;
 		protected Decote decote;
 		protected Cava cava;
+		protected Lapela lapela;
 		protected Boolean capuz;
 		protected Boolean capa;
-		protected MacacaoComprimento comprimentoMacacao;
+		protected ComprimentoDeCalca comprimentoMacacao;
 		protected PunhoCalca punhoCalca;
 		protected GanchoTipos ganchoTipos;
 		
@@ -82,11 +80,6 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 			this.genero = genero;
 			return this;
 		}
-		public MacacaoBuilder grupoEtario(GrupoEtario grupoEtario) {
-			this.grupoEtario = grupoEtario;
-			return this;
-		}
-		
 		public MacacaoBuilder cor(String cor) {
 			this.cor = cor;
 			return this;
@@ -97,10 +90,6 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 		}
 		public MacacaoBuilder tecidos(Tecido tecidos) {
 			this.tecidos = tecidos;
-			return this;
-		}
-		public MacacaoBuilder aviamento(String[] aviamentos) {
-			this.aviamentos = aviamentos;
 			return this;
 		}
 		public MacacaoBuilder temEstampa(Boolean temEstampa) {
@@ -123,6 +112,11 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 			this.cava = cava;
 			return this;
 		}
+		
+		public MacacaoBuilder lapela(Lapela lapela) {
+			this.lapela = lapela;
+			return this;
+		}
 		public MacacaoBuilder capuz(Boolean capuz) {
 			this.capuz = capuz;
 			return this;
@@ -133,7 +127,7 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 		}
 
 		
-		public MacacaoBuilder comprimentoMacacao(MacacaoComprimento comprimentoMacacao) {
+		public MacacaoBuilder comprimentoMacacao(ComprimentoDeCalca comprimentoMacacao) {
 			this.comprimentoMacacao = comprimentoMacacao;
 			return this;
 		}
@@ -142,7 +136,7 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 			this.punhoCalca = punhoCalca;
 			return this;
 		}
-		public MacacaoBuilder comprimentoMacacao(GanchoTipos ganchoTipos) {
+		public MacacaoBuilder ganchoTipo(GanchoTipos ganchoTipos) {
 			this.ganchoTipos = ganchoTipos;
 			return this;
 		}
@@ -158,15 +152,46 @@ public class Macacao extends ParteDeCimaECorpoInteiro{
 	
 	@Override
 	public String toString() {
-		return "\nPEÇA CRIADA! \n" + this.tipoDeRoupa + " ---> " + this.nome + " " + "\nComprimento: " + this.comprimentoMacacao + "\nTamanho: " + this.tamanho  
-				+ "\nGrupo: " + this.genero + " " + this.grupoEtario + "\nCor: " + this.cor + "\n\nDe tecido: "
-				+ this.tecidos + "\nDe Modelagem: " + this.modelagem + "\n      Manga: " + " " 
-				+ this.manga + " " + "\n      Cava: " + this.cava + "\n      Decote:  " + this.decote
-				+ "\n      Gancho: " + this.ganchoTipos
-				+ "\n      Punho: " + this.punhoCalca
-				+ "\n      Possui Capuz: " + this.capuz
-				+ "\n      Possui Capa:  " + this.capa;
-				
+		return "\nPEÇA CRIADA! " 
+				+ this.tipoDeRoupa + " ---> " + this.nome.toUpperCase()
+				+ " Comprimento: " + this.comprimentoMacacao 
+				+ " Tamanho: " + this.tamanho  
+				+ " Grupo: " + this.genero 
+				+ " Cor: " + this.cor.toUpperCase()
+				+ " Tecido: "	+ this.tecidos 
+				+ " Modelagem: " + this.modelagem 
+				+ "      Manga: "	+ this.manga 
+				+ "      Cava: " + this.cava 
+				+ "      Decote:  " + this.decote
+				+ "      Gancho: " + this.ganchoTipos
+				+ "      Punho: " + this.punhoCalca
+				+ "      Possui Capuz: " + this.capuz
+				+ "      Possui Capa:  " + this.capa;
 				
 	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(comprimentoMacacao, ganchoTipos, punhoCalca);
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Macacao other = (Macacao) obj;
+		return comprimentoMacacao == other.comprimentoMacacao && ganchoTipos == other.ganchoTipos
+				&& punhoCalca == other.punhoCalca;
+	}
+	
+	
 }

@@ -1,10 +1,9 @@
 package roupa.modelo.parteDeBaixo.SemPernas;
 
-import java.util.Collection;
 
-import roupa.modelo.Aviamento;
+import java.util.Objects;
+
 import roupa.modelo.Genero;
-import roupa.modelo.GrupoEtario;
 import roupa.modelo.TipoDeRoupa;
 import roupa.modelo.modelagem.Modelagem;
 import roupa.modelo.parteDeBaixo.ParteDeBaixo;
@@ -20,11 +19,9 @@ public class Saias  extends ParteDeBaixo{
 		this.nome = builder.nome;
 		this.tamanho = builder.tamanho;
 		this.genero = builder.genero;
-		this.grupoEtario = builder.grupoEtario;
 		this.cor = builder.cor;
 		this.modelagem = builder.modelagem;
 		this.tecidos = builder.tecidos;
-		this.aviamentos = builder.aviamentos;
 		this.temEstampa = builder.temEstampa;
 		this.temBordado = builder.temBordado;
 		this.tipoDeRoupa = builder.tipoDeRoupa;
@@ -38,11 +35,9 @@ public class Saias  extends ParteDeBaixo{
 		protected final TipoDeRoupa tipoDeRoupa = TipoDeRoupa.PARTE_DE_BAIXO;
 		protected Integer tamanho;
 		protected Genero genero;
-		protected GrupoEtario grupoEtario;
 		protected String cor;
 		protected Modelagem modelagem;
 		protected Tecido tecidos;
-		protected String[] aviamentos;
 		protected Boolean temEstampa;
 		protected Boolean temBordado;
 		protected Cintura cintura;
@@ -63,11 +58,6 @@ public class Saias  extends ParteDeBaixo{
 			this.genero = genero;
 			return this;
 		}
-		public SaiasBuilder grupoEtario(GrupoEtario grupoEtario) {
-			this.grupoEtario = grupoEtario;
-			return this;
-		}
-		
 		public SaiasBuilder cor(String cor) {
 			this.cor = cor;
 			return this;
@@ -78,10 +68,6 @@ public class Saias  extends ParteDeBaixo{
 		}
 		public SaiasBuilder tecidos(Tecido tecidos) {
 			this.tecidos = tecidos;
-			return this;
-		}
-		public SaiasBuilder aviamento(String[] aviamentos) {
-			this.aviamentos = aviamentos;
 			return this;
 		}
 		public SaiasBuilder temEstampa(Boolean temEstampa) {
@@ -114,11 +100,41 @@ public class Saias  extends ParteDeBaixo{
 	
 	@Override
 	public String toString() {
-		return "\nPEÇA CRIADA! \n" + this.tipoDeRoupa + " ---> " + this.nome + "\nComprimento: " +  this.comprimentoDeSaia + "\nCintura:  " + this.cintura + "\nTamanho: " + this.tamanho  
-				+ "\nGrupo: " + this.genero + " " + this.grupoEtario + "\nCor: " + this.cor + "\n\nDe tecido: "
-				+ this.tecidos + "\nDe Modelagem: " + this.modelagem; 
+		return "\nPEÇA CRIADA! " 
+				+ this.tipoDeRoupa + " ---> " + this.nome.toUpperCase()
+				+ " Comprimento: " +  this.comprimentoDeSaia 
+				+ " Cintura:  " + this.cintura 
+				+ " Tamanho: " + this.tamanho  
+				+ " Grupo: " + this.genero 
+				+ " Cor: " + this.cor.toUpperCase()
+				+ " Tecido: "	+ this.tecidos 
+				+ " Modelagem: " + this.modelagem; 
 				
 				
 				
 	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(comprimentoDeSaia);
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Saias other = (Saias) obj;
+		return comprimentoDeSaia == other.comprimentoDeSaia;
+	}
+	
+	
 }

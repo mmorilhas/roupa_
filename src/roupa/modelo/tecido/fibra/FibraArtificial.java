@@ -6,4 +6,8 @@ public abstract class FibraArtificial extends Fibra {
 		tipoFibra = tipoFibra.ARTIFICIAL;
 	}
 
+
+	
+	
+
 }

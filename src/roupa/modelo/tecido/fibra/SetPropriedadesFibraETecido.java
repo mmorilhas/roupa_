@@ -1,8 +1,6 @@
 package roupa.modelo.tecido.fibra;
 
 public interface SetPropriedadesFibraETecido {
-	void setTodasPropriedadesDeUmaVez();
-	
 	void setTempoDeSecagem();
 
 	void setEhRespiravel();

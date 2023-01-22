@@ -1,32 +1,29 @@
 package roupa.modelo.parteDeBaixo.ComPernas;
 
-import java.util.Collection;
 
-import roupa.modelo.Aviamento;
 import roupa.modelo.Genero;
-import roupa.modelo.GrupoEtario;
 import roupa.modelo.TipoDeRoupa;
 import roupa.modelo.modelagem.Modelagem;
-import roupa.modelo.parteDeBaixo.InferiorComPernas;
+import roupa.modelo.parteDeBaixo.ParteDeBaixo;
 import roupa.modelo.parteDeBaixo.ComPernas.enumerators.ComprimentoDeCalca;
 import roupa.modelo.parteDeBaixo.ComPernas.enumerators.GanchoTipos;
 import roupa.modelo.parteDeBaixo.ComPernas.enumerators.PunhoCalca;
 import roupa.modelo.parteDeBaixo.enumerators.Cintura;
 import roupa.modelo.tecido.Tecido;
 
-public class Calca extends InferiorComPernas {
-
-	protected ComprimentoDeCalca comprimentoCalca;
+public class Calca extends ParteDeBaixo {
+	
+	 protected PunhoCalca punhoCalca;
+	 protected GanchoTipos gancho;
+	 protected ComprimentoDeCalca comprimentoCalca;
 
 	public Calca(CalcaBuilder builder) {
 		this.nome = builder.nome;
 		this.tamanho = builder.tamanho;
 		this.genero = builder.genero;
-		this.grupoEtario = builder.grupoEtario;
 		this.cor = builder.cor;
 		this.modelagem = builder.modelagem;
 		this.tecidos = builder.tecidos;
-		this.aviamentos = builder.aviamentos;
 		this.temEstampa = builder.temEstampa;
 		this.temBordado = builder.temBordado;
 		this.tipoDeRoupa = builder.tipoDeRoupa;
@@ -42,11 +39,9 @@ public class Calca extends InferiorComPernas {
 		protected final TipoDeRoupa tipoDeRoupa = TipoDeRoupa.PARTE_DE_BAIXO;
 		protected Integer tamanho;
 		protected Genero genero;
-		protected GrupoEtario grupoEtario;
 		protected String cor;
 		protected Modelagem modelagem;
 		protected Tecido tecidos;
-		protected String[] aviamentos;
 		protected Boolean temEstampa;
 		protected Boolean temBordado;
 		protected Cintura cintura;
@@ -69,11 +64,6 @@ public class Calca extends InferiorComPernas {
 			return this;
 		}
 
-		public CalcaBuilder grupoEtario(GrupoEtario grupoEtario) {
-			this.grupoEtario = grupoEtario;
-			return this;
-		}
-
 		public CalcaBuilder cor(String cor) {
 			this.cor = cor;
 			return this;
@@ -86,11 +76,6 @@ public class Calca extends InferiorComPernas {
 
 		public CalcaBuilder tecidos(Tecido tecidos) {
 			this.tecidos = tecidos;
-			return this;
-		}
-
-		public CalcaBuilder aviamento(String[] aviamentos) {
-			this.aviamentos = aviamentos;
 			return this;
 		}
 
@@ -132,16 +117,18 @@ public class Calca extends InferiorComPernas {
 
 	@Override
 	public String toString() {
-		return "\nPEÇA CRIADA! \n" 
-				+ this.tipoDeRoupa + " ---> " + this.nome
-				+  "\nComprimento: " + this.comprimentoCalca + " " + this.cintura 
-				+ "\nTamanho: " + this.tamanho 
-				+ "\nGrupo: " + this.genero + " " + this.grupoEtario 
-				+ "\nCor: " + this.cor 
-				+ "\n\nDe tecido: " + this.tecidos 
-				+ "\nDe Modelagem: " + this.modelagem 
-				+ "\n      Gancho: " + this.gancho 
-				+ "\n      Punho: " + this.punhoCalca;
+		return "\nPEÇA CRIADA! " 
+				+ this.tipoDeRoupa + " ---> " 
+				+ this.nome.toUpperCase()
+				+ " Comprimento: " + this.comprimentoCalca 
+				+ " Cintura: " + this.cintura 
+				+ " Tamanho: " + this.tamanho 
+				+ " Grupo: " + this.genero 
+				+ " Cor: " + this.cor.toUpperCase()
+				+ " Tecido: " + this.tecidos 
+				+ " Modelagem: " + this.modelagem 
+				+ "      Gancho: " + this.gancho 
+				+ "      Punho: " + this.punhoCalca;
 
 	}
 

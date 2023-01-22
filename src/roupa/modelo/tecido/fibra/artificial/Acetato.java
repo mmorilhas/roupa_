@@ -13,7 +13,7 @@ import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 public class Acetato extends FibraArtificial implements SetPropriedadesFibraETecido{
 	
 	@Override
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades() {
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();
@@ -23,6 +23,7 @@ public class Acetato extends FibraArtificial implements SetPropriedadesFibraETec
 		setComportamentoTermico();
 		setElasticidade();
 	}
+	
 	
 
 

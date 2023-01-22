@@ -2,6 +2,7 @@ package roupa.modelo.tecido;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import roupa.modelo.tecido.fibra.Fibra;
 import roupa.modelo.tecido.fibra.SetPropriedadesFibraETecido;
 
@@ -46,15 +47,15 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		if (tecidos.size() > 1) {
 			if (tecidos.contains("NATURAL") && tecidos.contains("ARTIFICIAL")
 					|| tecidos.contains("NATURAL") && tecidos.contains("SINTETICA")) {
-				tipoDeTecido = "Misto";
+				tipoDeTecido = "MISTO";
 			} else {
-				tipoDeTecido = "Sintético";
+				tipoDeTecido = "SINTÉTICO";
 			}
 		}else {
 			if (tecidos.contains("NATURAL")) {
-				tipoDeTecido = "Natural";
+				tipoDeTecido = "NATURAL";
 			} else {
-				tipoDeTecido = "Sintético";
+				tipoDeTecido = "SINTÉTICO";
 			}
 		}
 
@@ -179,8 +180,43 @@ public class Tecido implements SetPropriedadesFibraETecido {
 	
 	@Override
 	public String toString() {
-		return "\nTecido: " + this.construcao + " " + this.tipoDeTecido + "\nPropriedades: \n      " + this.absorcaoAguaTecido + "\n      " + this.tempoSecagemTecido + "\n      " + this.tecidoRespiravel + "\n      " + this.comportamentoTermicoTecido + "\n      " + this.resistenciaTecido + "\n      " + this.elasticidadeTecido + "\n";
+		return "\nConstrução: " + this.construcao 
+				+ "\nTipo: " + this.tipoDeTecido 
+				+ "\nPropriedades: \n      " + this.absorcaoAguaTecido 
+				+ "\n      " + this.tempoSecagemTecido 
+				+ "\n      " + this.tecidoRespiravel 
+				+ "\n      " + this.comportamentoTermicoTecido 
+				+ "\n      " + this.resistenciaTecido 
+				+ "\n      " + this.elasticidadeTecido + "\n";
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(absorcaoAguaTecido, comportamentoTermicoTecido, composicao, construcao, elasticidadeTecido,
+				resistenciaTecido, tecidoRespiravel, tempoSecagemTecido, tipoDeTecido);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Tecido other = (Tecido) obj;
+		return Objects.equals(absorcaoAguaTecido, other.absorcaoAguaTecido)
+				&& Objects.equals(comportamentoTermicoTecido, other.comportamentoTermicoTecido)
+				&& Objects.equals(composicao, other.composicao) 
+				&& construcao == other.construcao
+				&& Objects.equals(elasticidadeTecido, other.elasticidadeTecido)
+				&& Objects.equals(resistenciaTecido, other.resistenciaTecido)
+				&& Objects.equals(tecidoRespiravel, other.tecidoRespiravel)
+				&& Objects.equals(tempoSecagemTecido, other.tempoSecagemTecido)
+				&& Objects.equals(tipoDeTecido, other.tipoDeTecido);
+	}
+
+
 
 
 }

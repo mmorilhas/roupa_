@@ -1,5 +1,11 @@
 package roupa.modelo.modelagem;
 
+import java.util.Objects;
+
+import roupa.modelo.modelagem.enumerators.Barra;
+import roupa.modelo.modelagem.enumerators.Pregas;
+import roupa.modelo.modelagem.enumerators.TipoFechamento;
+
 public class Modelagem {
 
 	Boolean bolsos;
@@ -13,7 +19,7 @@ public class Modelagem {
 	Boolean babado;
 	Boolean cinto;
 	Boolean passantes;
-	String silhueta;
+	Silhueta silhueta;
 	
 	
 	
@@ -44,7 +50,7 @@ public class Modelagem {
 		Boolean babado;
 		Boolean cinto;
 		Boolean passantes;
-		String silhueta;
+		Silhueta silhueta;
 		
 		
 		public ModelagemBuilder bolsos(Boolean bolsos) {
@@ -93,7 +99,7 @@ public class Modelagem {
 			return this;
 		}
 		
-		public ModelagemBuilder silhueta(String silhueta) {
+		public ModelagemBuilder silhueta(Silhueta silhueta) {
 			this.silhueta = silhueta;
 			return this;
 		}
@@ -107,7 +113,7 @@ public class Modelagem {
 	@Override
 	public String toString() {
 		return "\n      " + this.silhueta 
-				+ "\n      Fenda: " + this.fenda 
+				+ "\n      Fenda: " + this.fenda
 				+ "\n      Pences: " + this.pences
 				+ "\n      Bolso: " + this.bolsos
 				+ "\n      Fechamento: " + this.tipoFechamento 
@@ -120,6 +126,29 @@ public class Modelagem {
 				+ "\n      Forro: " + this.forro  ;
 	}
 
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(babado, barra, bolsos, cinto, fenda, forro, pala, passantes, pences, pregas, silhueta,
+				tipoFechamento);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Modelagem other = (Modelagem) obj;
+		return Objects.equals(babado, other.babado) && barra == other.barra && Objects.equals(bolsos, other.bolsos)
+				&& Objects.equals(cinto, other.cinto) && Objects.equals(fenda, other.fenda)
+				&& Objects.equals(forro, other.forro) && Objects.equals(pala, other.pala)
+				&& Objects.equals(passantes, other.passantes) && Objects.equals(pences, other.pences)
+				&& pregas == other.pregas && silhueta == other.silhueta && tipoFechamento == other.tipoFechamento;
+	}
 
 
 

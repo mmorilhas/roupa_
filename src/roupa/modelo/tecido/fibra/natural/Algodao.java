@@ -12,8 +12,9 @@ import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 
 public class Algodao extends FibraNatural implements SetPropriedadesFibraETecido{
 	
+	
 	@Override
-	public void setTodasPropriedadesDeUmaVez(){
+	public void setTodasAsPropriedades() {
 		setNomeFibra();
 		setTipoFibra();
 		setTempoDeSecagem();
@@ -23,7 +24,6 @@ public class Algodao extends FibraNatural implements SetPropriedadesFibraETecido
 		setComportamentoTermico();
 		setElasticidade();
 	}
-	
 
 
 	public void setNomeFibra() {
@@ -68,7 +68,9 @@ public class Algodao extends FibraNatural implements SetPropriedadesFibraETecido
 	@Override
 	public String toString() {
 		
-		return "\nFibra: " + this.getNomeFibra() + "   Tipo: " + this.getTipoFibra() + "\nPropriedades: " + this.getAbsorcaoDeAgua() + ", " + this.getTempoDeSecagem()  + ", " + this.getRespiravel()  + ", " + this.getResistencia() + ", " + this.getComportamentoTermico()  + " e " + this.getElasticidade() + "\n";
+		return 	
+				
+				"\nFibra: " + this.getNomeFibra() + "   Tipo: " + this.getTipoFibra() + "\nPropriedades: " + this.getAbsorcaoDeAgua() + ", " + this.getTempoDeSecagem()  + ", " + this.getRespiravel()  + ", " + this.getResistencia() + ", " + this.getComportamentoTermico()  + " e " + this.getElasticidade() + "\n";
 	}
 	
 
