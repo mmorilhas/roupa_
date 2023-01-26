@@ -8,7 +8,7 @@ import roupa.modelo.tecido.fibra.SetPropriedadesFibraETecido;
 
 public class Tecido implements SetPropriedadesFibraETecido {
 
-	Collection<Fibra> composicao;
+	Collection<Fibra> composicao = new HashSet<>();
 	protected Construcao construcao;
 	protected String tipoDeTecido;
 	protected String tempoSecagemTecido;
@@ -17,7 +17,7 @@ public class Tecido implements SetPropriedadesFibraETecido {
 	protected String elasticidadeTecido;
 	protected String comportamentoTermicoTecido;
 	protected String resistenciaTecido;
-	
+
 	public Tecido(Collection<Fibra> composicao, Construcao construcao) {
 		super();
 		this.composicao = composicao;
@@ -27,20 +27,21 @@ public class Tecido implements SetPropriedadesFibraETecido {
 	public Collection<Fibra> getComposicao() {
 		return composicao;
 	}
+
+
 	
 	public void setTodasAsPropriedades() {
-	
-			setTipoDeTecido();
-			setTempoDeSecagem();
-			setEhRespiravel();
-			setAbsorcaoDeAgua();
-			setElasticidade();
-			setComportamentoTermico();
-			setResistencia();
-	
+
+		setTipoDeTecido();
+		setTempoDeSecagem();
+		setEhRespiravel();
+		setAbsorcaoDeAgua();
+		setElasticidade();
+		setComportamentoTermico();
+		setResistencia();
+
 	}
-	
-	
+
 	public void setTipoDeTecido() {
 		HashSet<String> tecidos = new HashSet<>();
 		composicao.forEach(fibra -> tecidos.add(fibra.getTipoFibra().toString()));
@@ -51,7 +52,7 @@ public class Tecido implements SetPropriedadesFibraETecido {
 			} else {
 				tipoDeTecido = "SINTÉTICO";
 			}
-		}else {
+		} else {
 			if (tecidos.contains("NATURAL")) {
 				tipoDeTecido = "NATURAL";
 			} else {
@@ -61,7 +62,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 
 	}
 
-	
 	@Override
 	public void setTempoDeSecagem() {
 		HashSet<String> tecidos = new HashSet<>();
@@ -78,9 +78,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		}
 
 	}
-	
-
-
 
 	@Override
 	public void setEhRespiravel() {
@@ -89,7 +86,7 @@ public class Tecido implements SetPropriedadesFibraETecido {
 
 		if (tecidos.size() > 1) {
 			tecidoRespiravel = "moderadamente respirável";
-		}else {
+		} else {
 			if (tecidos.contains("NAO_E_RESPIRAVEL")) {
 				tecidoRespiravel = "não é respirável";
 			} else {
@@ -98,7 +95,6 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		}
 
 	}
-	
 
 	@Override
 	public void setAbsorcaoDeAgua() {
@@ -146,28 +142,27 @@ public class Tecido implements SetPropriedadesFibraETecido {
 
 		} else {
 			if (tecidos.contains("BOA_CONSERVACAO_DE_CALOR")) {
-				comportamentoTermicoTecido  = "possui boa conservação de calor";
+				comportamentoTermicoTecido = "possui boa conservação de calor";
 			} else {
-				comportamentoTermicoTecido  = "possui boa regulação de calor";
+				comportamentoTermicoTecido = "possui boa regulação de calor";
 			}
 		}
 	}
-	
 
 	@Override
 	public void setResistencia() {
 		HashSet<String> tecidos = new HashSet<>();
 		composicao.forEach(fibra -> tecidos.add(fibra.getResistencia().toString()));
-		if(tecidos.size() > 1) {
-			if(tecidos.contains("POUCO_RESISTENTE")) {
+		if (tecidos.size() > 1) {
+			if (tecidos.contains("POUCO_RESISTENTE")) {
 				resistenciaTecido = "resistente";
-			}  else {
-			resistenciaTecido = "muito resistente";
+			} else {
+				resistenciaTecido = "muito resistente";
 			}
 		} else {
-			if(tecidos.contains("MUITO_RESISTENTE")) {
+			if (tecidos.contains("MUITO_RESISTENTE")) {
 				resistenciaTecido = "muito resistente";
-			} else if(tecidos.contains("RESISTENTE")) {
+			} else if (tecidos.contains("RESISTENTE")) {
 				resistenciaTecido = "resistente";
 			} else {
 				resistenciaTecido = "pouco resistente";
@@ -175,21 +170,15 @@ public class Tecido implements SetPropriedadesFibraETecido {
 		}
 
 	}
-	
 
-	
 	@Override
 	public String toString() {
-		return "\nConstrução: " + this.construcao 
-				+ "\nTipo: " + this.tipoDeTecido 
-				+ "\nPropriedades: \n      " + this.absorcaoAguaTecido 
-				+ "\n      " + this.tempoSecagemTecido 
-				+ "\n      " + this.tecidoRespiravel 
-				+ "\n      " + this.comportamentoTermicoTecido 
-				+ "\n      " + this.resistenciaTecido 
-				+ "\n      " + this.elasticidadeTecido + "\n";
+		return "" + this.tecendo() + " Construção: " + this.construcao + " Tipo: " + this.tipoDeTecido
+				+ " Propriedades:  " + this.absorcaoAguaTecido + " - " + this.tempoSecagemTecido + " - "
+				+ this.tecidoRespiravel + " - " + this.comportamentoTermicoTecido + " - " + this.resistenciaTecido
+				+ " - " + this.elasticidadeTecido;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(absorcaoAguaTecido, comportamentoTermicoTecido, composicao, construcao, elasticidadeTecido,
@@ -197,26 +186,58 @@ public class Tecido implements SetPropriedadesFibraETecido {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
+	public boolean equals(Object outro) {
+		if(outro == null)return false;
+		if(this.getClass() != outro.getClass()) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Tecido other = (Tecido) obj;
-		return Objects.equals(absorcaoAguaTecido, other.absorcaoAguaTecido)
-				&& Objects.equals(comportamentoTermicoTecido, other.comportamentoTermicoTecido)
-				&& Objects.equals(composicao, other.composicao) 
-				&& construcao == other.construcao
-				&& Objects.equals(elasticidadeTecido, other.elasticidadeTecido)
-				&& Objects.equals(resistenciaTecido, other.resistenciaTecido)
-				&& Objects.equals(tecidoRespiravel, other.tecidoRespiravel)
-				&& Objects.equals(tempoSecagemTecido, other.tempoSecagemTecido)
-				&& Objects.equals(tipoDeTecido, other.tipoDeTecido);
+		}
+		Tecido tecido = (Tecido) outro;
+		return Objects.equals(absorcaoAguaTecido, tecido.absorcaoAguaTecido)
+				&& Objects.equals(comportamentoTermicoTecido, tecido.comportamentoTermicoTecido)
+				&& Objects.equals(composicao, tecido.composicao) && construcao == tecido.construcao
+				&& Objects.equals(elasticidadeTecido, tecido.elasticidadeTecido)
+				&& Objects.equals(resistenciaTecido, tecido.resistenciaTecido)
+				&& Objects.equals(tecidoRespiravel, tecido.tecidoRespiravel)
+				&& Objects.equals(tempoSecagemTecido, tecido.tempoSecagemTecido)
+				&& Objects.equals(tipoDeTecido, tecido.tipoDeTecido);
 	}
 
+	public String tecendo() {
+		return "tecendo....... Pronto para ser usado!";
+	}
 
+	public Construcao getConstrucao() {
+		return construcao;
+	}
 
+	public String getTipoDeTecido() {
+		return tipoDeTecido;
+	}
 
+	public String getTempoSecagemTecido() {
+		return tempoSecagemTecido;
+	}
+
+	public String getTecidoRespiravel() {
+		return tecidoRespiravel;
+	}
+
+	public String getAbsorcaoAguaTecido() {
+		return absorcaoAguaTecido;
+	}
+
+	public String getElasticidadeTecido() {
+		return elasticidadeTecido;
+	}
+
+	public String getComportamentoTermicoTecido() {
+		return comportamentoTermicoTecido;
+	}
+
+	public String getResistenciaTecido() {
+		return resistenciaTecido;
+	}
+
+	
+	
 }

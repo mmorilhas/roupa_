@@ -64,11 +64,6 @@ public class Viscose extends FibraArtificial implements SetPropriedadesFibraETec
 
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "\nFibra: " + this.getNomeFibra() + "   Tipo: " + this.getTipoFibra() + "\nPropriedades: " + " é " + this.getAbsorcaoDeAgua() + ", " + this.getTempoDeSecagem()  + ", " + this.getRespiravel()  + ", " + this.getResistencia() + ", " + this.getComportamentoTermico()  + " e " + this.getElasticidade() + "\n";
-	}
-	
+
 
 }

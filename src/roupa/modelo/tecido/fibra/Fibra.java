@@ -1,7 +1,6 @@
 package roupa.modelo.tecido.fibra;
 
 import java.util.Objects;
-
 import roupa.modelo.tecido.fibra.enumerators.AbsorcaoAguaFibra;
 import roupa.modelo.tecido.fibra.enumerators.ComportamentoTermicoFibra;
 import roupa.modelo.tecido.fibra.enumerators.ElasticidadeFibra;
@@ -47,9 +46,9 @@ public abstract class Fibra{
 		return resistencia;
 	}
 	
-	public void setTodasAsPropriedades() {
+	public void setTodasAsPropriedades() {}
 		
-	}
+
 	
 	@Override
 	public int hashCode() {
@@ -57,22 +56,31 @@ public abstract class Fibra{
 				tempoDeSecagem, tipoFibra);
 	}
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
+	public boolean equals(Object outro) {
+		if(outro == null) return false;
+		if(this.getClass() != outro.getClass()) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Fibra other = (Fibra) obj;
-		return absorcaoDeAgua == other.absorcaoDeAgua && comportamentoTermico == other.comportamentoTermico
-				&& elasticidade == other.elasticidade && nomeFibra == other.nomeFibra
-				&& resistencia == other.resistencia && respiravel == other.respiravel
-				&& tempoDeSecagem == other.tempoDeSecagem && tipoFibra == other.tipoFibra;
+		}
+	
+		Fibra fibra = (Fibra) outro;
+		return absorcaoDeAgua == fibra.absorcaoDeAgua && comportamentoTermico == fibra.comportamentoTermico
+				&& elasticidade == fibra.elasticidade && nomeFibra == fibra.nomeFibra
+				&& resistencia == fibra.resistencia && respiravel == fibra.respiravel
+				&& tempoDeSecagem == fibra.tempoDeSecagem && tipoFibra == fibra.tipoFibra;
 	}
 
+	public String fiando( ) {
+				
+		return "fiando..... Fibra pronta para Tecelagem! ";
+	}
 	
 	
+	@Override
+	public String toString() {
+		
+		return this.fiando()+ "\nFibra: " + this.getNomeFibra() + "   Tipo: " + this.getTipoFibra() + "\nPropriedades: "  + this.getAbsorcaoDeAgua() + ", " + this.getTempoDeSecagem()  + ", " + this.getRespiravel()  + ", " + this.getResistencia() + ", " + this.getComportamentoTermico()  + " e " + this.getElasticidade() + "\n";
+	}
+
 	
 
 	

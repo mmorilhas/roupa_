@@ -1,10 +1,18 @@
 package roupa.modelo.modelagem;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Objects;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import roupa.modelo.Roupa;
 import roupa.modelo.modelagem.enumerators.Barra;
 import roupa.modelo.modelagem.enumerators.Pregas;
+import roupa.modelo.modelagem.enumerators.Silhueta;
 import roupa.modelo.modelagem.enumerators.TipoFechamento;
+import roupa.modelo.pBaixo.semPernas.Calcolas.CalcolasBuilder;
 
 public class Modelagem {
 
@@ -14,15 +22,13 @@ public class Modelagem {
 	Boolean pala;
 	Pregas pregas;
 	Boolean pences;
-	Boolean fenda; 
+	Boolean fenda;
 	Boolean forro;
 	Boolean babado;
 	Boolean cinto;
 	Boolean passantes;
 	Silhueta silhueta;
-	
-	
-	
+
 	public Modelagem(ModelagemBuilder builder) {
 		this.bolsos = builder.bolsos;
 		this.tipoFechamento = builder.tipoFechamento;
@@ -37,7 +43,7 @@ public class Modelagem {
 		this.passantes = builder.passantes;
 		this.silhueta = builder.silhueta;
 	}
-	
+
 	public static class ModelagemBuilder {
 		Boolean bolsos;
 		TipoFechamento tipoFechamento;
@@ -45,87 +51,88 @@ public class Modelagem {
 		Boolean pala;
 		Pregas pregas;
 		Boolean pences;
-		Boolean fenda; 
+		Boolean fenda;
 		Boolean forro;
 		Boolean babado;
 		Boolean cinto;
 		Boolean passantes;
 		Silhueta silhueta;
-		
-		
+
 		public ModelagemBuilder bolsos(Boolean bolsos) {
 			this.bolsos = bolsos;
 			return this;
 		}
-		
+
 		public ModelagemBuilder tipoFechamento(TipoFechamento tipoFechamento) {
 			this.tipoFechamento = tipoFechamento;
 			return this;
 		}
+
 		public ModelagemBuilder barra(Barra barra) {
-			this.barra= barra;
+			this.barra = barra;
 			return this;
 		}
+
 		public ModelagemBuilder pala(Boolean pala) {
 			this.pala = pala;
 			return this;
 		}
-		public ModelagemBuilder  pregas(Pregas  pregas) {
-			this.pregas=  pregas;
+
+		public ModelagemBuilder pregas(Pregas pregas) {
+			this.pregas = pregas;
 			return this;
 		}
+
 		public ModelagemBuilder pences(Boolean pences) {
 			this.pences = pences;
 			return this;
 		}
+
 		public ModelagemBuilder fenda(Boolean fenda) {
 			this.fenda = fenda;
 			return this;
 		}
+
 		public ModelagemBuilder forro(Boolean forro) {
 			this.forro = forro;
 			return this;
 		}
+
 		public ModelagemBuilder babado(Boolean babado) {
 			this.babado = babado;
 			return this;
 		}
+
 		public ModelagemBuilder cinto(Boolean cinto) {
 			this.cinto = cinto;
 			return this;
 		}
+
 		public ModelagemBuilder passantes(Boolean passantes) {
 			this.passantes = passantes;
 			return this;
 		}
-		
+
 		public ModelagemBuilder silhueta(Silhueta silhueta) {
 			this.silhueta = silhueta;
 			return this;
 		}
-		
+
 		public Modelagem build() {
 			return new Modelagem(this);
 		}
 	}
 
-	
 	@Override
 	public String toString() {
-		return "\n      " + this.silhueta 
-				+ "\n      Fenda: " + this.fenda
-				+ "\n      Pences: " + this.pences
-				+ "\n      Bolso: " + this.bolsos
-				+ "\n      Fechamento: " + this.tipoFechamento 
-				+ "\n      Cinto: " + this.cinto 
-				+ "\n      Passantes: " + this.passantes
-				+ "\n      Pregas: " + this.pregas
-				+ "\n      Babado: " + this.babado
-				+ "\n      Pala: " + this.pala
-				+ "\n      Barra: " + this.barra
-				+ "\n      Forro: " + this.forro  ;
+		return "  " + this.silhueta + "  Fenda: " + this.fenda + "  Pences: " + this.pences + "  Bolso: " + this.bolsos
+				+ "  Fechamento: " + this.tipoFechamento + "  Cinto: " + this.cinto + "  Passantes: " + this.passantes
+				+ "  Pregas: " + this.pregas + "  Babado: " + this.babado + "  Pala: " + this.pala + "  Barra: "
+				+ this.barra + "  Forro: " + this.forro;
 	}
 
+	
+	
 	
 	@Override
 	public int hashCode() {
@@ -133,27 +140,20 @@ public class Modelagem {
 				tipoFechamento);
 	}
 
-
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
+	public boolean equals(Object outro) {
+		if(outro == null)return false;
+		if(this.getClass() != outro.getClass()) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Modelagem other = (Modelagem) obj;
-		return Objects.equals(babado, other.babado) && barra == other.barra && Objects.equals(bolsos, other.bolsos)
-				&& Objects.equals(cinto, other.cinto) && Objects.equals(fenda, other.fenda)
-				&& Objects.equals(forro, other.forro) && Objects.equals(pala, other.pala)
-				&& Objects.equals(passantes, other.passantes) && Objects.equals(pences, other.pences)
-				&& pregas == other.pregas && silhueta == other.silhueta && tipoFechamento == other.tipoFechamento;
+		}
+		Modelagem modelagem = (Modelagem) outro;
+		return Objects.equals(babado, modelagem.babado) && barra == modelagem.barra && Objects.equals(bolsos, modelagem.bolsos)
+				&& Objects.equals(cinto, modelagem.cinto) && Objects.equals(fenda, modelagem.fenda)
+				&& Objects.equals(forro, modelagem.forro) && Objects.equals(pala, modelagem.pala)
+				&& Objects.equals(passantes, modelagem.passantes) && Objects.equals(pences, modelagem.pences)
+				&& pregas == modelagem.pregas && silhueta == modelagem.silhueta && tipoFechamento == modelagem.tipoFechamento;
+		
 	}
-
-
-
-
 	
-	
-	
+
 }

@@ -67,17 +67,5 @@ public class Acetato extends FibraArtificial implements SetPropriedadesFibraETec
 
 	}
 	
-	@Override
-	public String toString() {
-		setNomeFibra();
-		setTipoFibra();
-		setTempoDeSecagem();
-		setEhRespiravel();
-		setAbsorcaoDeAgua();
-		setResistencia();
-		setComportamentoTermico();
-		setElasticidade();
-		
-		return "\nFibra: " + this.getNomeFibra() + "   Tipo: " + this.getTipoFibra() + "\nPropriedades: "  + this.getAbsorcaoDeAgua() + ", " + this.getTempoDeSecagem()  + ", " + this.getRespiravel()  + ", " + this.getResistencia() + ", " + this.getComportamentoTermico()  + " e " + this.getElasticidade() + "\n";
-	}
+
 }

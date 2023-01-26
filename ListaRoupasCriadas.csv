@@ -1,0 +1,115 @@
+Total de linhas lidas(exceto cabeçalho): 44
+
+[
+
+Não foi possível instanciar o objeto. Este campo não aceita este valor ->  nome  Linha: 2, 
+
+Não foi possível instanciar o objeto. Este campo não aceita este valor ->  genero  Linha: 3, 
+
+Não foi possível instanciar o objeto. Este campo não aceita este valor ->  cor  Linha: 4, 
+
+Não foi possível instanciar o objeto. Este campo não aceita este valor ->  tipoFechamento  Linha: 5, 
+
+Não foi possível instanciar o objeto. Estes campos não podem ter esses valores simultaneamente: decote - capuz  Linha: 6, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> CAMISA Tamanho: 12 Comprimento: QUADRIL Grupo: MASCULINO Cor: ROSA / Tecido: null/ / Modelagem: null  Manga: REGATA_RAGLAN  Cava: SEM_CAVA  Decote:  COLARINHO_CURTO  Possui Capuz: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> TOP Tamanho: 14 Comprimento: CINTURA Grupo: FEMININO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: PLANO Tipo: SINTÉTICO Propriedades:  hidrofóbico - secagem rápida - é respirável - possui regulação de calor moderada - muito resistente - boa elasticidade/ / Modelagem:   RETA  Fenda: false  Pences: true  Bolso: false  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: false  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false  Manga: REGATA  Cava: JUSTA  Decote:  GOLA_ALTA  Possui Capuz: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> PONCHO Tamanho: 35 Comprimento: QUADRIL Grupo: MASCULINO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: PLANO Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui regulação de calor moderada - muito resistente - boa elasticidade/ / Modelagem:   RETA  Fenda: false  Pences: false  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: false  Pregas: NAO_POSSUI  Babado: false  Pala: false  Barra: INVISIVEL  Forro: false  Manga: SEM_MANGA  Cava: SEM_CAVA  Decote:  EM_V  Possui Capuz: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> CASACO Comprimento: QUADRIL Tamanho: 32 Grupo: FEMININO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - secagem rápida - moderadamente respirável - possui regulação de calor moderada - muito resistente - boa elasticidade/ / Modelagem:   BAGGY  Fenda: true  Pences: true  Bolso: true  Fechamento: BOTAO_COSTAS  Cinto: true  Passantes: true  Pregas: PLISSADO  Babado: false  Pala: true  Barra: INVISIVEL  Forro: true  Manga: CURTA_TULIPA  Cava: BAIXA  Decote:  QUADRADO  Possui Capuz: false/, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - lapela - comprimento casaco - comprimento de outras peças Linha: 11, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - lapela - comprimento casaco - comprimento de outras peças Linha: 12, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - body tipo - calçola tipo  - comprimento/partes de outras peças Linha: 13, 
+
+costurando.......
+PEÇA CRIADA! CORPO_INTEIRO ---> BODY COM_BOTAO SLIP Tamanho: 33 Grupo: FEMININO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: JACQUARD Tipo: SINTÉTICO Propriedades:  hidrofóbico - secagem rápida - é respirável - possui boa regulação de calor - muito resistente - alta elasticidade/ / Modelagem:   AJUSTADA  Fenda: true  Pences: true  Bolso: true  Fechamento: COLCHETE_LATERAL  Cinto: true  Passantes: true  Pregas: PLISSADO  Babado: false  Pala: true  Barra: INVISIVEL  Forro: true  Manga: CURTA_BUFANTE_PUNHO_ELASTICO  Cava: BAIXA  Decote:  CARECA  Possui Capuz: false/, 
+
+Não foi possível instanciar o objeto. Verifique os campos: nome - comprimento saia - comprimento/partes de outras peças    Linha: 15, 
+
+costurando.......
+PEÇA CRIADA! CORPO_INTEIRO ---> VESTIDO Comprimento: MICRO Tamanho: 33 Grupo: FEMININO Cor: ROSA / Tecido  tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui regulação de calor moderada - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: true  Pences: true  Bolso: true  Fechamento: FITA_FRENTE  Cinto: true  Passantes: true  Pregas: PLISSADO  Babado: false  Pala: true  Barra: INVISIVEL  Forro: true  Manga: LONGA_VAZADO  Cava: BAIXA  Decote:  EM_V  Possui Capuz: false/, 
+
+Não foi possível instanciar o objeto. Verifique os campos: nome - comprimento calça - comprimento/partes de outras peças    Linha: 17, 
+
+Não foi possível instanciar o objeto. Verifique os campos: nome - comprimento calça - comprimento/partes de outras peças    Linha: 18, 
+
+costurando.......
+PEÇA CRIADA! CORPO_INTEIRO ---> MACACAO Comprimento: PANTACOURT Tamanho: 33 Grupo: FEMININO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  hidrofóbico - secagem rápida - moderadamente respirável - possui regulação de calor moderada - muito resistente - baixa elasticidade/ / Modelagem:   AJUSTADA  Fenda: true  Pences: true  Bolso: true  Fechamento: BOTAO_LATERAL  Cinto: true  Passantes: true  Pregas: PLISSADO  Babado: false  Pala: true  Barra: INVISIVEL  Forro: true  Manga: CURTA_BUFANTE_PUNHO_ELASTICO  Cava: BAIXA  Decote:  GOLA_ALTA  Gancho: null  Punho: null  Possui Capuz: true/, 
+
+Não foi possível instanciar o objeto. Verifique os campos: nome - comprimento calça - cintura - gancho - punho - comprimento/partes de outras peças    Linha: 20, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> CALÇA Comprimento: PANTACOURT Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: NATURAL Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false  Gancho: null  Punho: null/, 
+
+Não foi possível instanciar o objeto. Verifique os campos: nome - comprimento calça - cintura - gancho - punho - comprimento/partes de outras peças    Linha: 22, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> CALCA Comprimento: PANTACOURT Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false  Gancho: null  Punho: null/, 
+
+Não foi possível instanciar o objeto. Estes campos não podem ter esses valores simultaneamente: nome - comprimento calça  Linha: 24, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> BERMUDA Comprimento: NO_JOELHO Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false  Gancho: null  Punho: null/, 
+
+Não foi possível instanciar o objeto. Estes campos não podem ter esses valores simultaneamente: nome - comprimento calça  Linha: 26, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> SHORTS Comprimento: MICRO Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui regulação de calor moderada - muito resistente - alta elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false  Gancho: null  Punho: null/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> TANGA SLIP Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: NATURAL Propriedades:  hidrofílico - secagem lenta - é respirável - possui boa conservação de calor - muito resistente - alta elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> TANGA SLIP Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   RETA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - calçola tipo - silhueta -  cintura - comprimento e/ou partes de outras peças Linha: 30, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> CALCINHA SLIP Cintura: ALTA Tamanho: 44 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui regulação de calor moderada - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+Não foi possível instanciar o objeto. Estes campos não podem ter esses valores simultaneamente: nome - genero  Linha: 32, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> CUECA SLIP Cintura: ALTA Tamanho: 44 Grupo: MASCULINO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - calçola tipo - silhueta -  cintura - comprimento e/ou partes de outras peças Linha: 34, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - cintura - comprimento saia - comprimento e/ou partes de outras peças Linha: 35, 
+
+Não foi possível instanciar o objeto. Verifique os campos:nome - cintura - comprimento saia - comprimento e/ou partes de outras peças Linha: 36, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> SAIA Comprimento: MICRO Cintura:  ALTA Tamanho: 34 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> SAIA Comprimento: MICRO Cintura:  ALTA Tamanho: 34 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: SINTÉTICO Propriedades:  hidrofóbico - secagem rápida - é respirável - possui regulação de calor moderada - muito resistente - alta elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: ZIPER_FRENTE  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> CAMISETA Tamanho: 36 Comprimento: CROPPED Grupo: FEMININO Cor: VERDE / Tecido: null/ / Modelagem: null  Manga: REGATA  Cava: JUSTA  Decote:  GOLA_ALTA  Possui Capuz: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_CIMA ---> CAMISETA Tamanho: 14 Comprimento: CROPPED Grupo: FEMININO Cor: ROSA / Tecido: null/ / Modelagem: null  Manga: TRES_QUARTOS_GODE  Cava: JUSTA  Decote:  GOLA_ALTA  Possui Capuz: false/, 
+
+Não foi possível instanciar o objeto. Estes campos não podem ter esses valores simultaneamente: nome, comprimento Blusa - comprimento de outras peças  Linha: 41, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> SAIA Comprimento: MICRO Cintura:  ALTA Tamanho: 34 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: NAO_POSSUI  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+costurando.......
+PEÇA CRIADA! PARTE_DE_BAIXO ---> SAIA Comprimento: MICRO Cintura:  ALTA Tamanho: 34 Grupo: FEMININO Cor: AZUL / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: MISTO Propriedades:  absorve água moderadamente - tempo de secagem mediano - é respirável - possui boa regulação de calor - muito resistente - boa elasticidade/ / Modelagem:   AJUSTADA  Fenda: false  Pences: true  Bolso: true  Fechamento: NAO_POSSUI  Cinto: false  Passantes: true  Pregas: NAO_POSSUI  Babado: false  Pala: true  Barra: INVISIVEL  Forro: false/, 
+
+costurando.......
+PEÇA CRIADA! CORPO_INTEIRO ---> MACACAO Comprimento: PANTACOURT Tamanho: 33 Grupo: FEMININO Cor: ROSA / Tecido: tecendo....... Pronto para ser usado! Construção: MALHA Tipo: NATURAL Propriedades:  absorve água moderadamente - tempo de secagem mediano - moderadamente respirável - possui regulação de calor moderada - muito resistente - baixa elasticidade/ / Modelagem:   AJUSTADA  Fenda: true  Pences: true  Bolso: true  Fechamento: NAO_POSSUI  Cinto: true  Passantes: true  Pregas: PLISSADO  Babado: false  Pala: true  Barra: INVISIVEL  Forro: true  Manga: CURTA_RAGLAN  Cava: BAIXA  Decote:  EM_U  Gancho: null  Punho: null  Possui Capuz: false/, 
+
+Não foi possível instanciar o objeto. Este campo não aceita este valor ->  nome  Linha: 45]
+
+Total roupas criadas: 22

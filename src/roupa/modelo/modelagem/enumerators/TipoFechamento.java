@@ -27,20 +27,15 @@ public enum TipoFechamento {
 		return value;
 	}
 	
-	public int getTipo() {
-		return tipo;
-	}
-	
-	public static int pegaTipo(String name) {
-		int resultado = 0;
-		for (TipoFechamento tipoFechamento : values()) {
-            if (tipoFechamento.name().equalsIgnoreCase(name) || tipoFechamento.getValue().equalsIgnoreCase(name)) {
-               resultado = tipoFechamento.getTipo();
-                break;
-            }
-        }
-        return resultado;
-	}
+	/*
+	 * public int getTipo() { return tipo; }
+	 * 
+	 * public static int pegaTipo(String name) { int resultado = 0; for
+	 * (TipoFechamento tipoFechamento : values()) { if
+	 * (tipoFechamento.name().equalsIgnoreCase(name) ||
+	 * tipoFechamento.getValue().equalsIgnoreCase(name)) { resultado =
+	 * tipoFechamento.getTipo(); break; } } return resultado; }
+	 */
 	
 	public static TipoFechamento pegaEnum(String name) {
 		 TipoFechamento resultado = null;
