@@ -1,4 +1,4 @@
-package roupa.modelo.EntradaESaida;
+package roupa.EntradaESaida;
 
 import java.util.Collection;
 import java.util.HashSet;

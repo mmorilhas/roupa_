@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import roupa.modelo.EntradaESaida.TrataDados;
+import roupa.EntradaESaida.TrataDados;
 
 public class TesteCriaRoupa{
 	

@@ -9,7 +9,7 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import roupa.modelo.EntradaESaida.Saida;
+import roupa.EntradaESaida.Saida;
 
 public class TesteSaida {
 	

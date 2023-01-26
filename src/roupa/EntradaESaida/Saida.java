@@ -1,4 +1,4 @@
-package roupa.modelo.EntradaESaida;
+package roupa.EntradaESaida;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -17,9 +17,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.rules.ExpectedException;
 
 import junit.framework.AssertionFailedError;
-import roupa.modelo.EntradaESaida.EntradaESaida;
-import roupa.modelo.EntradaESaida.Saida;
-import roupa.modelo.EntradaESaida.TrataDados;
+import roupa.EntradaESaida.EntradaESaida;
+import roupa.EntradaESaida.Saida;
+import roupa.EntradaESaida.TrataDados;
 
 public class TesteEntrada {
 
