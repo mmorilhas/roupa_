@@ -20,7 +20,7 @@ public class TesteSaida {
 		saida.add("estou sendo testada");
 		
 		Saida s = new Saida();
-		s.criaCSVSaida("TesteSaida", saida, 1, 0);
+		//s.criaCSVSaida("TesteSaida", saida, 1, 0);
 		
 		assertFalse(saida.isEmpty());
 	}
@@ -31,7 +31,7 @@ public class TesteSaida {
 		List<Object> saida = new ArrayList<>();
 		
 		Saida s = new Saida();
-		s.criaCSVSaida("TesteSaida", saida, 1, 0);
+		//s.criaCSVSaida("TesteSaida", saida, 1, 0);
 		
 		assertTrue(saida.isEmpty());
 	}

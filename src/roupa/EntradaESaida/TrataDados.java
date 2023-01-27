@@ -318,14 +318,14 @@ public class TrataDados {
 			}
 
 //	-------------------  Verificando PUNHO CALCA TIPO ------------------- 
-			if (!(!PunhoCalca.existeNoEnum(punhoCalca) || punhoCalca.contains("null"))) {
+			if (!(PunhoCalca.existeNoEnum(punhoCalca) || punhoCalca.contains("null"))) {
 				saida.add(msgErro("punho Calça", contagemLinha));
 				contagemLinha++;
 				contagemErros++;
 				break;
 			}
 //	 -------------------  Verificando GANCHO  ------------------- 
-			if (!(!GanchoTipos.existeNoEnum(ganchoTipo) || ganchoTipo.contains("null"))) {
+			if (!(GanchoTipos.existeNoEnum(ganchoTipo) || ganchoTipo.contains("null"))) {
 				saida.add(msgErro("gancho", contagemLinha));
 				contagemLinha++;
 				contagemErros++;
@@ -492,7 +492,7 @@ public class TrataDados {
 							|| !comprimentoCasaco.equals("null") 
 							|| !comprimentoTop.equals("null"))) {
 				saida.add(
-						msgErro("nome, comprimento Blusa", "comprimento de outras peças", contagemLinha));
+						msgErro("nome", "comprimento Blusa", "comprimento de outras peças", contagemLinha));
 				contagemLinha++;
 				contagemErros++;
 				break;
@@ -810,10 +810,11 @@ public class TrataDados {
 					.temEstampa(entradaToBoolean(temEstampa)).temBordado(entradaToBoolean(temBordado))
 					.manga(Manga.pegaEnum(manga)).decote(Decote.pegaEnum(decote))
 					.cava(Cava.pegaEnum(cava))
+					.punhoCalca(PunhoCalca.pegaEnum(punhoCalca))
+					.ganchoTipo(GanchoTipos.pegaEnum(ganchoTipo))
 					.capuz(entradaToBoolean(temCapuz))
 					.comprimentoMacacao(ComprimentoDeCalca.pegaEnum(comprimentoCalca))
-					.punhoCalca(PunhoCalca.pegaEnum(punhoCalca))
-					.ganchoTipo(GanchoTipos.pegaEnum(ganchoTipo)).build();
+					.build();
 			
 			saida.add(macacao);
 			contagemLinha++;contagemRoupasCriadas++;

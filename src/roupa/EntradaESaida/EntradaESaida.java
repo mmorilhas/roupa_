@@ -17,16 +17,18 @@ public class EntradaESaida {
 		//---------------------------------
 
 		File file = new File("Roupa.csv");
+	
 		
+		//String path = "C:\\temp\\Roupa - Roupa.csv";
 		//String path = "C:\\temp\\Roupa.csv";
-				//"C:\\Users\\Magna\\Downloads\\Planilha sem título - Página1.csv";
+						//"C:\\Users\\Magna\\Downloads\\Planilha sem título - Página1.csv";
 
 		try (FileInputStream fis = new FileInputStream(file);
 				InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
 				BufferedReader br = new BufferedReader(isr)) {
 			
 			String line = br.readLine();
-			line = br.readLine();
+			//line = br.readLine();
 
 			while (line != null) {
 				String[] vect = line.split(",");
@@ -66,8 +68,8 @@ public class EntradaESaida {
 				String calcolaTipo = vect[32].toLowerCase().trim().replace(" ", "_");
 				String comprimentoSaia = vect[33].toLowerCase().trim().replace(" ", "_");
 				String comprimentoCalca = vect[34].toLowerCase().trim().replace(" ", "_");
-				String punhoCalca = vect[35].toLowerCase().trim().replace(" ", "_");
-				String ganchoTipo = vect[36].toLowerCase().trim().replace(" ", "_");
+				String ganchoTipo = vect[35].toLowerCase().trim().replace(" ", "_");
+				String punhoCalca = vect[36].toLowerCase().trim().replace(" ", "_");
 				String cintura = vect[37].toLowerCase().trim().replace(" ", "_");
 				
 				
@@ -83,7 +85,7 @@ public class EntradaESaida {
 		}
 		
 		Saida saida = new Saida();
-		saida.criaCSVSaida("ListaRoupasCriadas___1", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
+		saida.criaCSVSaida("ListaRoupasCriadas", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
 	
 
 	}

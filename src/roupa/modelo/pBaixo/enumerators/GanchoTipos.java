@@ -17,9 +17,10 @@ public enum GanchoTipos {
 	}
 	
 
-	 public static GanchoTipos pegaEnum(String valor) {
+	
+	public static GanchoTipos pegaEnum(String valor) {
 		 GanchoTipos resultado = null;
-	        for (GanchoTipos gancho : values()) {
+	        for (GanchoTipos gancho: values()) {
 	            if (gancho.name().equalsIgnoreCase(valor) || gancho.getValue().equalsIgnoreCase(valor)) {
 	            	resultado  = gancho;
 	                break;
@@ -38,4 +39,5 @@ public enum GanchoTipos {
 	        }
 	        return achou;
 	    }
+	
 }

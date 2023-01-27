@@ -100,7 +100,7 @@ public class TesteEntrada {
 		
 		
 		Saida saida = new Saida();
-		saida.criaCSVSaida("ListaRoupasCriadas_NOVA_3", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
+		//saida.criaCSVSaida("ListaRoupasCriadas_NOVA_3", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
 	
 		assertFalse(td.getSaida().isEmpty());
 	}
