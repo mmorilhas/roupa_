@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 public class EntradaESaida {
 
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) {
 		TrataDados td = new TrataDados();
 			
 		//---------------------------------
@@ -85,7 +85,7 @@ public class EntradaESaida {
 		}
 		
 		Saida saida = new Saida();
-		saida.criaCSVSaida("ListaRoupasCriadas", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
+		saida.criaCSVSaida("ListaRoupasCriadas__1", td.getSaida(), td.getContagemLinha(), td.getContagemRoupasCriadas());
 	
 
 	}
