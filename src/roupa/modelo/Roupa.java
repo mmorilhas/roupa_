@@ -7,7 +7,7 @@ import roupa.modelo.tecido.Tecido;
 
 public abstract class Roupa{
 	
-	
+
 	protected String nome;
 	protected TipoDeRoupa tipoDeRoupa;
 	protected Integer tamanho;

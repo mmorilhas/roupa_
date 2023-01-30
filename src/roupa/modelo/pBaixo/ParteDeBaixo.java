@@ -6,7 +6,7 @@ import roupa.modelo.Roupa;
 import roupa.modelo.pBaixo.enumerators.Cintura;
 
 public abstract class ParteDeBaixo extends Roupa{
-
+	
 	protected Cintura cintura;
 
 	@Override

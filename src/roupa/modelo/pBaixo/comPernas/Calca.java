@@ -18,7 +18,7 @@ public class Calca extends ParteDeBaixo {
 	 protected PunhoCalca punhoCalca;
 	 protected GanchoTipos gancho;
 	 protected ComprimentoDeCalca comprimentoCalca;
-
+	 
 	public Calca(CalcaBuilder builder) {
 		this.nome = builder.nome;
 		this.tamanho = builder.tamanho;

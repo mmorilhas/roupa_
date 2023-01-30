@@ -13,7 +13,7 @@ import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 public class Elastano extends FibraSintetica implements SetPropriedadesFibraETecido{
 	
 	//elastano ou Lycra
-	
+	@Override
 	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();

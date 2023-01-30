@@ -11,7 +11,7 @@ import roupa.modelo.tecido.fibra.enumerators.RespiravelFibra;
 import roupa.modelo.tecido.fibra.enumerators.TempoDeSecagemFibra;
 
 public class Couro extends FibraNatural implements SetPropriedadesFibraETecido {
-	
+	 @Override
 	public void setTodasAsPropriedades(){
 		setNomeFibra();
 		setTipoFibra();

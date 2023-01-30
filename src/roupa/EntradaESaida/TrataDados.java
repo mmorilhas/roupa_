@@ -126,7 +126,7 @@ public class TrataDados {
 		}
 		return false;
 	}
-	
+
 
 	public void confereSeDadosSaoNoFormatoCorretoEChamaCriaRoupa(String nome, String tamanho, 
 			String genero, 
@@ -823,7 +823,8 @@ public class TrataDados {
 		
 		if (nome.contains("calca") || nome.contains("calça") || nome.contains("bermuda")
 				|| nome.contains("shorts")) {
-			Roupa calca = new CalcaBuilder().nome(nome).tamanho(Integer.parseInt(tamanho))
+			Roupa calca = new CalcaBuilder()
+					.nome(nome).tamanho(Integer.parseInt(tamanho))
 					.genero(Genero.pegaEnum(genero)).cor(cor).modelagem(modelagem).tecidos(tecido)
 					.temEstampa(entradaToBoolean(temEstampa)).temBordado(entradaToBoolean(temBordado))
 					.cintura(Cintura.pegaEnum(cintura)).punhoCalca(PunhoCalca.pegaEnum(punhoCalca))
